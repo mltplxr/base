@@ -1,5 +1,6 @@
 let id = Math.floor(Math.random() * 1000000);
 let img;
+let canvasOpacity = 50; 
 
 function preload() {
   img  = loadImage("holo.png");
@@ -7,7 +8,7 @@ function preload() {
 }
 
 function setup() {
-   createCanvas(300, 500);
+  createCanvas(300, 500);
   background(255, canvasOpacity);
   // Display ID on canvas
   textSize(12);
