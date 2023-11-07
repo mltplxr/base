@@ -37,8 +37,8 @@ vertex(j, i + noiseVal * 100); // 200 < for smoothness
   image(img, 100, 100, 100, 100);
 }
 // save png
-  function keyTyped() {
+function keyTyped() {
   if (key === 's') {
-    saveCanvas('###', 'png');
+   saveCanvas('###', 'png');
   }
-  }
+}
