@@ -1,6 +1,6 @@
 let id = Math.floor(Math.random() * 1000000);
 let img;
-let canvasOpacity = 60;
+let canvasOpacity = 10;
 
 function preload() {
   img  = loadImage("holo.png");
