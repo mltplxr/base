@@ -13,7 +13,7 @@ function setup() {
   textSize(12);
   text(id, 10, 20);
   image(img, 0, 0, 300, 300);
-  strokeWeight(0.07);
+  strokeWeight(0.03);
   noFill();
   
 }
