@@ -8,7 +8,7 @@ function preload() {
 
 function setup() {
   createCanvas(300, 500);
-  background(255, 0, 70); // 3rd no for opacity
+  background(255, 0, 100); // 3rd no for opacity
   // Display ID on canvas
   textSize(12);
   text(id, 10, 20);
