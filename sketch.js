@@ -9,7 +9,7 @@ function setup() {
   textSize(100);
   //fill(random(255), random(255), random(255)); // Set random fill color
   //fill(random(150, 255), 0, random(150, 255)); // Blue and pink hues for text
-  fill(0, random(150, 250), random(150, 250)); // Mint hues for text
+  fill(0, random(150, 255), random(150, 255)); // Mint hues for text
   text(id, 0, 100);
   strokeWeight(0.1);
   noFill();
@@ -23,8 +23,8 @@ function drawRandomGradient() {
   //let c1 = color(random(150, 255), 0, random(150, 255)); // Blue and pink hues
  // let c2 = color(random(150, 255), 0, random(150, 255));
   
-   let c1 = color(0, random(150, 250), random(150, 250), random(150, 250)); // Mint hues
-  let c2 = color(0, random(150, 250), random(150, 250), random(150, 250));
+   let c1 = color(0, random(150, 255), random(150, 255), random(150, 255)); // Mint hues
+  let c2 = color(0, random(150, 255), random(150, 255), random(150, 255));
 
 
   // You can customize the gradient style here
@@ -52,7 +52,7 @@ vertex(j, i + noiseVal * 100); // 200 < for smoothness
     endShape();
   }
 
-  image(img, 100, 100, 100, 100);
+ // image(img, 100, 100, 100, 100);
 }
 
 
@@ -62,5 +62,6 @@ vertex(j, i + noiseVal * 100); // 200 < for smoothness
     saveCanvas('###', 'png');
   }
   }
+
 
 
