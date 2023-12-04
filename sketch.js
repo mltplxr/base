@@ -10,6 +10,7 @@ function setup() {
   createCanvas(300, 500);
   background(255); 
   // Display ID on canvas
+  textFont('monospace');
   textSize(12);
   text(id, 10, 20);
   image(img, 0, 0, 300, 300);
