@@ -41,10 +41,10 @@ function drawManuscript() {
 }
 
 function draw() {
-  for (let i = 0; i < height; i += 1) {
+  for (let i = 0; i < height; i += 1.1) {
     beginShape();
-    for (let j = 0; j < width; j += 1.8) {
-      let noiseVal = noise(j / 200, i / 40);
+    for (let j = 0; j < width; j += 1.5) {
+      let noiseVal = noise(j / 200, i / 50);
       vertex(j, i + noiseVal * 100);
     }
     endShape();
@@ -59,5 +59,3 @@ function draw() {
     saveCanvas('###', 'png');
   }
   }
-
-
