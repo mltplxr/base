@@ -22,7 +22,7 @@ function setup() {
 
 function drawRandomGradient() {
   for (let i = 0; i <= height; i++) {
-    let shade = random(0, 255);
+    let shade = random(0, 10);
     stroke(shade);
     line(0, i, width, i);
     
