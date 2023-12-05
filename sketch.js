@@ -35,8 +35,8 @@ function drawManuscript() {
   manuscriptCanvas.textFont('monospace');
   manuscriptCanvas.textSize(10);
   manuscriptCanvas.fill(0); // Manuscript color
-  for (let i = 0; i < 500; i += 20) {
-    manuscriptCanvas.text("CONSENSUS ALONE CONFERS VALUE", 10, i + 500);
+  for (let i = 0; i < 100; i += 10) {
+    manuscriptCanvas.text("CONSENSUS ALONE CONFERS VALUE", 10, i + 40);
   }
 }
 
@@ -49,8 +49,7 @@ function draw() {
     }
     endShape();
   }
-  image(img, 20, 480, 380, 20);
-  image(manuscriptCanvas, 10, -10);
+  image(img, 20, 480, 380, 20);      image(manuscriptCanvas, 10, 360);
 }
 
 
@@ -60,4 +59,5 @@ function draw() {
     saveCanvas('###', 'png');
   }
   }
+
 
