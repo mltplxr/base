@@ -6,13 +6,15 @@ function preload() {
 
 }
 
+
 function setup() {
   createCanvas(300, 500);
+  background(255);
   textFont('monospace');
   textSize(100);
   //image(img, 0, 0, 300, 300);
   // Random grayscale for text
-  fill(random(100, 255));
+  fill(random(0, 255));
   text(id, 0, 100);
 
   strokeWeight(0.1);
@@ -46,7 +48,7 @@ vertex(j, i + noiseVal * 100); // 200 < for smoothness
     endShape();
   }
 
-  image(img, 0, 470, 400, 2);
+  image(img, 0, 470, 400, 20);
   
   
 }
