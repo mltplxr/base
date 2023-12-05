@@ -1,25 +1,26 @@
 let id = Math.floor(Math.random() * 1000000);
 let img;
+let manuscriptCanvas;
 
 function preload() {
-  img  = loadImage("holo.png");
-
+  img = loadImage("holo.png");
 }
 
-
 function setup() {
-  createCanvas(300, 500);
+  createCanvas(400, 700);
+  manuscriptCanvas = createGraphics(width, height);
+  
   background(255);
   textFont('monospace');
   textSize(100);
-  //image(img, 0, 0, 300, 300);
-  // Random grayscale for text
   fill(random(100, 200));
-  text(id, 0, 100);
+  text(id, 20, 100);
 
   strokeWeight(0.1);
   noFill();
-  drawRandomGradient(); // Random grayscale for background
+  drawRandomGradient();
+  
+  drawManuscript();
 }
 
 function drawRandomGradient() {
@@ -27,30 +28,29 @@ function drawRandomGradient() {
     let shade = random(0, 10);
     stroke(shade);
     line(0, i, width, i);
-    
+  }
+}
+
+function drawManuscript() {
+  manuscriptCanvas.textFont('monospace');
+  manuscriptCanvas.textSize(10);
+  manuscriptCanvas.fill(0); // Manuscript color
+  for (let i = 0; i < 500; i += 20) {
+    manuscriptCanvas.text("CONSENSUS ALONE CONFERS VALUE", 10, i + 500);
   }
 }
 
 function draw() {
-  
-
-
-for (let i = 0; i < height; i += 1) {// manipulate topography
-
-beginShape();
-
-for (let j = 0; j < width; j += 1.8) {// manipulate topography
-let noiseVal = noise(j/200, i/40); // 100, 100 > for smoothness 
-
-vertex(j, i + noiseVal * 100); // 200 < for smoothness
-
-}
+  for (let i = 0; i < height; i += 1) {
+    beginShape();
+    for (let j = 0; j < width; j += 1.8) {
+      let noiseVal = noise(j / 200, i / 40);
+      vertex(j, i + noiseVal * 100);
+    }
     endShape();
   }
-
-  image(img, 0, 470, 400, 20);
-  
-  
+  image(img, 20, 680, 480, 20);
+  image(manuscriptCanvas, 30, 10);
 }
 
 
