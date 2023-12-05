@@ -1,42 +1,36 @@
 let id = Math.floor(Math.random() * 1000000);
 let img;
 
+function preload() {
+  img  = loadImage("holo.png");
+
+}
 
 function setup() {
   createCanvas(300, 500);
-  drawRandomGradient() ;
   textFont('monospace');
   textSize(100);
-  //fill(random(255), random(255), random(255)); // Set random fill color
-  //fill(random(150, 255), 0, random(150, 255)); // Blue and pink hues for text
-  fill(0, random(150, 255), random(150, 255)); // Mint hues for text
+  //image(img, 0, 0, 300, 300);
+  // Random grayscale for text
+  fill(random(100, 255));
   text(id, 0, 100);
+
   strokeWeight(0.1);
   noFill();
-  
+  drawRandomGradient(); // Random grayscale for background
 }
 
 function drawRandomGradient() {
-  //let c1 = color(random(255), random(255), random(255));
- // let c2 = color(random(255), random(255), random(255));
-  
-  //let c1 = color(random(150, 255), 0, random(150, 255)); // Blue and pink hues
- // let c2 = color(random(150, 255), 0, random(150, 255));
-  
-   let c1 = color(0, random(150, 255), random(150, 255), random(150, 255)); // Mint hues
-  let c2 = color(0, random(150, 255), random(150, 255), random(150, 255));
-
-
-  // You can customize the gradient style here
   for (let i = 0; i <= height; i++) {
-    let inter = map(i, 0, height, 0, 1);
-    let c = lerpColor(c1, c2, inter);
-    stroke(c);
+    let shade = random(0, 255);
+    stroke(shade);
     line(0, i, width, i);
+    
   }
 }
-  
+
 function draw() {
+  
 
 
 for (let i = 0; i < height; i += 1) {// manipulate topography
@@ -52,7 +46,9 @@ vertex(j, i + noiseVal * 100); // 200 < for smoothness
     endShape();
   }
 
- // image(img, 100, 100, 100, 100);
+  image(img, 0, 470, 400, 2);
+  
+  
 }
 
 
@@ -62,6 +58,7 @@ vertex(j, i + noiseVal * 100); // 200 < for smoothness
     saveCanvas('###', 'png');
   }
   }
+
 
 
 
