@@ -14,7 +14,7 @@ function setup() {
   textSize(100);
   //image(img, 0, 0, 300, 300);
   // Random grayscale for text
-  fill(random(0, 255));
+  fill(random(100, 200));
   text(id, 0, 100);
 
   strokeWeight(0.1);
@@ -60,7 +60,6 @@ vertex(j, i + noiseVal * 100); // 200 < for smoothness
     saveCanvas('###', 'png');
   }
   }
-
 
 
 
