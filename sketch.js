@@ -7,14 +7,14 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(400, 700);
+  createCanvas(300, 500);
   manuscriptCanvas = createGraphics(width, height);
   
   background(255);
   textFont('monospace');
-  textSize(100);
+  textSize(80);
   fill(random(100, 200));
-  text(id, 20, 100);
+  text(id, 10, 100);
 
   strokeWeight(0.1);
   noFill();
@@ -49,8 +49,8 @@ function draw() {
     }
     endShape();
   }
-  image(img, 20, 680, 480, 20);
-  image(manuscriptCanvas, 30, 10);
+  image(img, 20, 480, 380, 20);
+  image(manuscriptCanvas, 10, -10);
 }
 
 
@@ -60,6 +60,4 @@ function draw() {
     saveCanvas('###', 'png');
   }
   }
-
-
 
