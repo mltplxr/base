@@ -7,6 +7,7 @@ function preload() {
 }
 
 function setup() {
+  
   createCanvas(300, 500);
   manuscriptCanvas = createGraphics(width, height);
   
@@ -16,6 +17,15 @@ function setup() {
   fill(random(100, 200));
   text(id, 10, 100);
 
+    // Rotate and display smaller ID at the top
+  push();
+  translate(width, 0);
+  rotate(HALF_PI);
+  textSize(10);
+  fill(random(100, 200));
+  text(id, 05, 10);
+  pop();
+  
   strokeWeight(0.1);
   noFill();
   drawRandomGradient();
