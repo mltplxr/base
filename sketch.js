@@ -15,7 +15,7 @@ function setup() {
   textFont('monospace');
   textSize(80);
   fill(random(100, 200));
-  text(id, 10, 100);
+  text(id, 0, 65);
 
     // Rotate and display smaller ID at the top
   push();
@@ -23,7 +23,7 @@ function setup() {
   rotate(HALF_PI);
   textSize(10);
   fill(random(100, 200));
-  text(id, 05, 10);
+  text(id, 8, 10);
   pop();
   
   strokeWeight(0.1);
