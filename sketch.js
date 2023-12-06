@@ -59,7 +59,7 @@ function draw() {
     }
     endShape();
   }
-  image(img, 20, 480, 380, 20);      image(manuscriptCanvas, 10, 360);
+  image(img, 10, 480, 380, 20);      image(manuscriptCanvas, 10, 360);
 }
 
 
