@@ -64,6 +64,9 @@ function draw() {
 
 
 // save png
+function touchStarted() {
+  saveCanvas('###', 'png');
+  }
   function keyTyped() {
   if (key === 's') {
     saveCanvas('###', 'png');
