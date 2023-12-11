@@ -1,9 +1,11 @@
 let id = Math.floor(Math.random() * 1000000);
 let img;
 let manuscriptCanvas;
+let svg;
 
 function preload() {
   img = loadImage("holo.png");
+  svg = loadImage("1840.svg");
 }
 
 function setup() {
@@ -31,13 +33,17 @@ function setup() {
   drawRandomGradient();
   
   drawManuscript();
+  image(svg, 195, 360, 100, 130);
+  
 }
+
 
 function drawRandomGradient() {
   for (let i = 0; i <= height; i++) {
     let shade = random(0, 10);
     stroke(shade);
     line(0, i, width, i);
+    
   }
 }
 
@@ -46,7 +52,7 @@ function drawManuscript() {
   manuscriptCanvas.textSize(10);
   manuscriptCanvas.fill(0); // Manuscript color
   for (let i = 0; i < 100; i += 10) {
-    manuscriptCanvas.text("CONSENSUS ALONE CONFERS VALUE", 10, i + 40);
+    manuscriptCanvas.text("CONSENSUS ALONE CONFERS VALUE", 03, i + 40);
   }
 }
 
@@ -60,6 +66,8 @@ function draw() {
     endShape();
   }
   image(img, 10, 480, 380, 20);      image(manuscriptCanvas, 10, 360);
+ 
+  
 }
 
 
